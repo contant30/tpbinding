@@ -1,0 +1,36 @@
+<div class="container">
+    
+    
+    <form (ngSubmit)="startSearch()" [formGroup]="searchForm" class="form-inline well well-in">
+
+        <!-- Mise en place d'un formulaire de recherche -->
+        <div class="form-grioup col-md-5">
+            <label>Veuillez entrer un tire de film</label>
+            <input type="text" class="form-control" placeholder="Titre de film" formControlName="title">
+        </div>
+
+        <!-- Mise en place d'un formulaire pour choisir l'année -->
+        <div class="form-group col-md-5">
+            <label>Veuillez choisir une année</label>
+            <input type="number" min="1900" max="2022" step="1" value="2018" class="form-control" formControlName="year">
+        </div>
+
+        <!-- Mise en place d'un bouton de recherche -->
+        <button type="submit" class="btn btn-primary">
+            Rechercher
+        </button>
+        
+    </form>
+</div>
+
+<!-- Mise en place d'un bloc pour afficher les erreurs -->
+<div *ngIf="errors" class="alert alert-danger">
+    <strong>Aucun résultat !</strong>
+    {{errors}}
+</div>
+
+@if(results){
+    <div class="list-group" [movieList]="results"></div>
+}
+
+

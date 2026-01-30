@@ -14,9 +14,10 @@
         <td>{{ product.ProductName }}</td>
         <td>{{ product.ProductDescription }}</td>
         <td>{{ product.ProductPrice }}</td>
-        <td><a [routerLink]="['/edit', product.id]" class="btn btn-primary">Edit</a></td>
-        <td><a [routerLink]="['/delete', product.id]" class="btn btn-danger">Delete</a></td>
+        <td><a class="btn btn-primary btn-sm" [routerLink]="['/product/edit', product.id]">Edit</a></td>
+        <td><button (click)="onDelete(product.id)" class="btn btn-danger btn-sm">Delete</button></td>
     </tr>
 }
+
 </tbody>
 </table>

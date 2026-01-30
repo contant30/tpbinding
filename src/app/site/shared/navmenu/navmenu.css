@@ -1,0 +1,9 @@
+@media (min-width: 576px) {  
+    .navbar-nav .nav-link {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    .navbar-nav .nav-item:not(:last-child) .nav-link {
+        border-right: 1px solid #175321;  /* Barre grise fine */
+    }
+}

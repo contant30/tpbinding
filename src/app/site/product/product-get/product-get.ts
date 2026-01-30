@@ -42,3 +42,4 @@ export class ProductGetComponent implements OnInit {
     // Pour bouton ajouter
   }
 }
+

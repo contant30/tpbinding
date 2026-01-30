@@ -20,7 +20,6 @@ export const routes: Routes = [
   { path: 'product/create', component: ProductAdd },
   { path: 'product/edit/:id', component: ProductEdit },
   { path: 'products', component: ProductGetComponent },
-  { path: 'product/delete/:id', component: ProductGetComponent },
 
   { path: '404', component: Errors },
   { path: '**', redirectTo: '/404' }
